@@ -1,0 +1,20 @@
+# Machine-specific workspace and provider preferences
+/ideations.local.json
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+
+# Private portfolio artifacts belong in an external workspace
+/workspace/
+/PORTFOLIO.md
+/REVIEWS.md
+/CROSS_POLLINATIONS.md
+/CALIBRATION.md
+/FOUNDER.md
+/*/CONTEXT.md
+*.bundle
+*.tar.gz
+*.zip
+.env
+.env.*
