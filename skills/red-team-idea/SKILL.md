@@ -1,33 +1,29 @@
 ---
 name: red-team-idea
-description: Attempt to disprove a captured idea's commercial case when asked to challenge it, identify failure modes, or decide why it may not be worth building.
+description: Challenge an idea's commercial case and identify evidence that would make it worth pursuing or abandoning.
 ---
 
-# Red-team an idea
+# Challenge an idea
 
-Read [the shared contract](../../docs/CONTRACT.md). Trigger on a request to challenge one captured idea; do not automatically run after market-check.
+Find the strongest case against investing more time in the idea.
 
-## Inputs and ownership
+Follow the [shared rules](../../docs/CONTRACT.md). Read CONTEXT.md, available MARKET.md, supplied evidence and any earlier CHALLENGE.md. Missing market research makes the assessment provisional.
 
-Require the selected idea's CONTEXT.md. Read MARKET.md if present, any existing CHALLENGE.md, and relevant supplied external evidence. Own only that idea's CHALLENGE.md. Append a dated assessment, preserving all earlier analysis and user annotations. Missing market evidence means a provisional challenge with explicit unknowns, not invented competitors or an automatic research run.
+## Build the case
 
-## Procedure and output
+1. Identify the customer, painful job, its frequency, and evidence of payment or costly workarounds. Ask whether the proposed mechanism changes an outcome this person cares about.
+2. Examine the most relevant obstacles: substitutes and inertia, switching costs, reaching buyers, incumbent advantages, operational dependencies, data exposure, AI commoditization, defensibility or timing. Label unresearched claims as hypotheses.
+3. Consider whether this is a business, a feature, a personal tool or an interesting technical question. Use evidenced founder constraints; leave unknown expertise, access and legal questions unresolved.
+4. State the strongest case still remaining for the idea. Avoid manufactured balance when evidence is weak. Distinguish missing evidence from evidence against it.
 
-Take the stance: “Why is this probably not worth building?” Attack the product case rather than the elegance of the mechanism. Identify the target person, painful job and frequency, actual evidence of payment or costly workarounds, and whether the mechanism changes an outcome that person cares about.
+## Save the challenge
 
-Consider substitutes and inertia, switching costs, accessible distribution, incumbent advantages, operational and dependency burden, data/regulatory exposure, AI commoditization, defensibility and timing. Use only relevant factors; mark unresearched claims as hypotheses. Consider founder-specific disadvantages and whether this is a feature, a personal tool, or an interesting technical puzzle with no demonstrated demand. Do not invent domain expertise, customer access, or legal conclusions.
+Append to **CHALLENGE.md** using `append-report red-team-idea`, usually in 500–800 words. Include:
 
-Keep the output focused (usually 500–800 words) with:
-- Strongest case against the idea, grounded in the most consequential observations.
-- Strongest case still remaining for it; do not manufacture balance if evidence is weak.
-- Fatal assumptions (a short candidate list for assumption-map).
-- Observations that would materially weaken the idea.
-- Observations that would materially strengthen it.
-- Most likely failure mode, explicitly labeled inference.
-- A section titled exactly **What would make us abandon this idea?** with falsifiable observations or proposed thresholds, not “if it fails.”
+- Strongest case against the idea and strongest case remaining.
+- A short list of assumptions that could invalidate it.
+- Observations that would materially strengthen or weaken it.
+- Most likely failure mode, labeled as an inference.
+- **What would make us abandon this idea?** Use this exact heading and give falsifiable observations or proposed thresholds.
 
-Distinguish missing evidence from negative evidence and hard constraints from untested worries. Do not give a simplistic yes/no verdict. Conceptual notes without a commercial thesis may receive “commercial case not specified; no build case established” rather than a fictional business plan.
-
-## Non-goals and handoff
-
-No new market summary, browsing, implementation, state change, or automatic downstream invocation. Suggest assumption-map only if narrowing uncertainty would help; then stop. The challenge may recommend parking or rejection but only promotion-gate applies decisions.
+For a conceptual note without a commercial thesis, say so rather than inventing a business. Finish with the most useful uncertainty to resolve; recommend assumption-map only when it would help. The challenge recommends a decision and never applies one.

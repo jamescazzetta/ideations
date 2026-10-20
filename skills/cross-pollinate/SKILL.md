@@ -1,28 +1,22 @@
 ---
 name: cross-pollinate
-description: On request, find at most three useful structural connections across existing ideas and write candidates for human review without creating or capturing new ideas.
+description: Find useful connections between existing ideas and present up to three candidates for human review.
 ---
 
-# Cross-pollinate carefully
+# Find useful connections
 
-Read [the shared contract](../../docs/CONTRACT.md). Trigger only when the user requests structural connections or synthesis across ideas. This is not part of the default capture or analysis pipeline.
+Look for a connection that could reduce work or sharpen an existing idea.
 
-## Inputs and ownership
+Follow the [shared rules](../../docs/CONTRACT.md). Read the workspace ideas' CONTEXT.md, relevant evidence, constraints and states, and any existing CROSS_POLLINATIONS.md.
 
-Read immediate workspace idea folders' CONTEXT.md and relevant existing evidence, constraints, states, and workspace CROSS_POLLINATIONS.md if present. Own only workspace CROSS_POLLINATIONS.md. Append a dated candidate section and preserve annotations. Missing optional analysis limits confidence; fewer than two suitable ideas can yield “no useful connection found.” Never manufacture folders to supply inputs.
+## Look for a connection
 
-## Output
+1. Compare customer problems, mechanisms, distribution routes, enabling tools and genuinely reusable components.
+2. Choose at most three strong connections. Explain the relationship and where the analogy breaks. Distinguish observed common ground from an inference.
+3. Explain how the connection could reduce active work, its opportunity cost, and the cheapest way to challenge it. Shared technology without shared customer value may simply be an implementation note.
 
-Favor at most THREE strong connections in one pass. For each:
-- Link the originating ideas and specify the structural relationship.
-- Explain whether it is a shared customer problem, mechanism, distribution route, enabling primitive, or genuinely reusable component.
-- Identify what is observed versus inferred and where the analogy breaks.
-- Explain whether combining or reusing could REDUCE active work rather than expand it.
-- State the cheapest way to challenge the connection and its opportunity cost.
-- Mark “CANDIDATE — HUMAN REVIEW REQUIRED,” not a portfolio idea or commitment.
+## Save candidates
 
-Do not force an ecosystem out of unrelated domains. Technical reuse without shared customer value may be a useful implementation note, not a new product. Zero connections is a valid result.
+Append only to workspace **CROSS_POLLINATIONS.md** using `append-report cross-pollinate` without `--idea`. For each candidate, link the original ideas and include the relationship, evidence, limits and proposed test. Mark it **CANDIDATE — HUMAN REVIEW REQUIRED**.
 
-## Critical non-goals
-
-MUST NOT invoke capture-ideas, create idea folders, change states, start research, delegate, or recursively invoke cross-pollinate. Never promote a candidate automatically. A later explicit human request may select a candidate for capture in a separate invocation; the captured idea begins at SEED with candidate provenance and no inherited validation. This skill ends after writing its single root artifact.
+Fewer than two suitable ideas, or no useful connection, can produce no candidates. Leave the idea inventory unchanged: this skill never creates folders, invokes capture, delegates or changes state. A later explicit request can capture a selected candidate separately; it starts at SEED with provenance and no inherited validation.

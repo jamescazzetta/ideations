@@ -1,10 +1,23 @@
-# Private founder context
+# Founder context
 
-Record only context that changes portfolio decisions. Keep this file in your private workspace.
+Copy this file into your private workspace as FOUNDER.md and edit that copy. It is optional: a few useful bullets are enough, and unknowns can stay blank. Skills read it when weighing fit, priorities and commitments.
 
-- Available time, delivery/support commitments and financial constraints:
-- Relevant experience and evidenced access to buyers:
-- Preferred business formats and outcomes:
-- Personal interests and noncommercial notes worth preserving:
+Updated: YYYY-MM-DD
 
-Date observations; distinguish preferences from demonstrated advantages. Do not store credentials or unnecessary customer details.
+## Time and commitments
+
+How much time can you give this? What delivery, support or personal commitments already compete for it?
+
+## Experience and access
+
+What relevant experience do you have? Which potential users or buyers can you actually reach? Distinguish demonstrated access from a hoped-for advantage.
+
+## Constraints and preferences
+
+What financial or operational limits matter? Do you prefer services, software, another format, or simply keeping useful ideas? What would make an idea worth your time?
+
+## Interests worth preserving
+
+Which interests or noncommercial thoughts do you want to keep without turning them into commitments?
+
+Date later changes and preserve earlier context where it explains past decisions. Keep credentials and unnecessary customer details out of this file.

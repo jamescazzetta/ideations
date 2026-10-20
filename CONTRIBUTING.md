@@ -2,6 +2,8 @@
 
 Read README.md and docs/CONTRACT.md first. Keep the core small and filesystem-based. Skills belong in `skills/`; portfolio data belongs in a separate workspace. Each report has one owner. Preserve append-only history and the distinction between hypotheses, external observations and human decisions.
 
+Write skills around the task: what to read, what to do, and what to return. Keep shared rules in the contract and link detailed references where they become relevant. A reader should understand the skill's purpose before encountering its exceptions.
+
 Run the standard-library suite from the core:
 
 ```sh

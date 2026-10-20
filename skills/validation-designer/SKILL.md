@@ -1,33 +1,31 @@
 ---
 name: validation-designer
-description: Design one cheap experiment to falsify an important idea assumption, preferring external evidence and no software over architecture or broad validation programs.
+description: Design one cheap experiment to test an important assumption, with clear success, failure and stop criteria.
 ---
 
-# Design cheap falsification
+# Design one small test
 
-Read [the shared contract](../../docs/CONTRACT.md). Trigger on a request for an idea validation test.
+Choose the experiment most likely to change the decision about an idea.
 
-## Inputs and ownership
+Follow the [shared rules](../../docs/CONTRACT.md). Read CONTEXT.md and available OFFER, MARKET, CHALLENGE, ASSUMPTIONS, EVIDENCE and previous VALIDATION notes. Without an assumption map, use one explicitly provisional assumption and explain that gate readiness requires it in ASSUMPTIONS.md.
 
-Require CONTEXT.md. Read available OFFER.md, MARKET.md, CHALLENGE.md, ASSUMPTIONS.md, relevant EVIDENCE.md, and prior VALIDATION.md if present. Own only VALIDATION.md. Append a dated plan with stable experiment ID (V1, etc.) and preserve earlier thresholds and annotations. If the assumption map is absent, draft provisionally against one explicitly labeled candidate assumption; state that gate readiness is blocked until it is recorded in ASSUMPTIONS.md. Other missing inputs are limitations, not reasons to start research.
+## Choose the experiment
 
-## Procedure and output
+1. Select the decisive uncertainty. Prefer evidence from actual behavior: interviews about recent experiences, a manual service, a payment request or a preorder before software.
+2. Choose a reachable audience and one plausible recruitment channel. State where access is assumed. Use mockups, waitlists, landing pages or ads only when they test the selected claim. A signup alone does not show willingness to pay.
+3. For an offer test, treat outcome, scope and price as hypotheses. Ask about existing spending/workarounds, buying authority and objections. Count attempted, reached and qualified contacts as well as responses, conversations and commitments.
+4. Set the sample or time window and effort/cost cap. Define meaningful, non-overlapping success, failure and ambiguous outcomes **before** the test, with a next decision for each.
+5. Record the current prediction: expected demand, likely result, difficulty and uncertainty. Preserve it for comparison with later observations.
 
-Choose ONE highest-information experiment aimed at the decisive uncertainty. Consider interviews about actual past behavior, direct outreach, manual concierge service, manual fulfillment, payment requests or preorders before software. Honest fake doors, landing pages, waitlists, community posts, small ads and clickable mockups are options only when they test the selected assumption. A signup measures interest, not automatically demand or willingness to pay.
+## Save the plan
 
-An offer test should use the proposed outcome, scope and price as hypotheses. Start with one plausible acquisition channel and a sustainable, bounded sample. Discovery asks about actual recent behavior, existing spending/workarounds, buying authority and objections. Record contacts attempted, eligible/reached people, responses, conversations and commitments so conversion claims have denominators. Distinguish a qualified paid pilot from a compliment, signup or unpaid demonstration. No arbitrary outreach-volume target or revenue guarantee follows from this procedure.
+Append to **VALIDATION.md** using `append-report validation-designer`. Give it a stable experiment ID (V1, V2, …) and include:
 
-For the primary experiment record:
-- Target assumption ID, hypothesis and the decision at stake.
-- Target user and a plausible recruitment route; identify access that is merely assumed.
-- Concrete procedure, sample/time window, and minimum effort/cost estimate (label estimates).
-- What evidence to collect, including refusals, drop-offs and denominators.
-- Predeclared success threshold, failure threshold, and ambiguous outcome; make them non-overlapping and explain why they are meaningful.
-- Stop date/cost cap and next decision for all three outcomes.
-- Current prediction: expected demand, likely result and difficulty, with uncertainty. These predictions remain in history for retrospective comparison.
+- Assumption ID, hypothesis and decision at stake.
+- Target user, recruitment route and concrete procedure.
+- Sample/time window, estimated effort/cost and stop date or cap.
+- Evidence to collect, including refusals, drop-offs and relevant totals.
+- Success, failure and ambiguous thresholds, why they matter, and the decision after each.
+- Prediction and status: **NOT RUN**.
 
-Thresholds must address the assumption, not vanity metrics. Prefer observations, commitments and payment over hypothetical “would you use this?” enthusiasm. Do not promise statistical certainty from a small sample. Optionally include 1–2 short alternatives only if they handle a real access or cost constraint.
-
-## Non-goals and handoff
-
-Do not propose architecture unless architecture itself is the hypothesis being tested. No giant program, new research, prototype implementation, outreach, publishing, spending, state change or automatic invocation. Clearly mark the experiment NOT RUN. Exact execution actions require applicable human authorization. Suggest returning actual observations to promotion-gate; never fabricate outcomes.
+Offer up to two alternatives only for a real access or cost constraint. Keep software architecture out unless it is the hypothesis being tested. Small samples yield limited evidence; activity or compliments do not replace the chosen outcome. Suggest returning actual observations to promotion-gate. This skill designs the test; it does not run it.

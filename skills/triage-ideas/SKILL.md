@@ -1,33 +1,36 @@
 ---
 name: triage-ideas
-description: Rank and prune ideas across the repository, recommending PROMOTE, VALIDATE, PARK, MERGE or KILL with explicit opportunity cost and portfolio limits.
+description: Compare ideas and recommend which to pursue, test, park, merge or stop, with explicit attention tradeoffs.
 ---
 
-# Triage the portfolio
+# Choose what deserves attention
 
-Read [the shared contract](../../docs/CONTRACT.md) and [lifecycle](../../README.md). Trigger when the user wants to compare ideas or decide what deserves scarce attention.
+Rank the portfolio against current commitments and the option of starting nothing.
 
-## Inputs and ownership
+Follow the [shared rules](../../docs/CONTRACT.md) and [lifecycle](../../docs/lifecycle.md). Use `python3 scripts/portfolio.py status`, then read the ideas' context, states, available assessments and evidence. Read PORTFOLIO.md and its human annotations, plus FOUNDER.md when present.
 
-Enumerate immediate workspace idea folders using `python3 scripts/portfolio.py status`; never include skills or test fixtures. Read their CONTEXT.md, canonical states, and available OFFER, MARKET, CHALLENGE, ASSUMPTIONS, VALIDATION, EVIDENCE, NEXT and retrospective records. Read existing PORTFOLIO.md, including manual commitments and annotations. Own only workspace PORTFOLIO.md; append a dated ranked assessment rather than replacing its history.
+## Compare the ideas
 
-Missing optional artifacts lower confidence; no state means SEED, not researched. If state is malformed, flag the conflict and stop recommendations that would increase commitment until repaired. With zero ideas write a brief empty-portfolio assessment; with one, compare against doing nothing and existing commitments, not fictional alternatives.
+1. Judge pain strength, founder fit, credible differentiation, access to buyers and cheap testability. Mark unknowns. Consider personal interest, time to an external signal, available resources and operating dependencies where they change the ranking.
+2. Include acquisition, onboarding, delivery and support effort. Ongoing work for shipped customers consumes attention. Compare a building idea with finishing its current scope.
+3. Give each idea one recommendation:
 
-## Decision procedure
+   | Recommendation | Meaning |
+   |---|---|
+   | PROMOTE | External evidence appears sufficient for gate review. |
+   | VALIDATE | One cheap test could change the decision. |
+   | PARK | Lower priority or useful as a reference; name a revisit trigger. |
+   | MERGE | Same underlying job/mechanism; name the destination and what to retain. |
+   | KILL | Strong negative evidence or an unacceptable dependency; explain what failed. |
 
-Use five qualitative dimensions: pain strength, founder fit/unfair advantage, credible differentiation, distribution accessibility, and cheap testability. Label unknowns. Consider bootstrap compatibility, external-signal latency, operating/dependency burden and durable personal interest where decisive. Include acquisition time, delivery capacity, onboarding/integration effort and recurring support when comparing service and product options. Count ongoing customer commitments for shipped work as opportunity cost even though SHIPPED does not consume an active lifecycle slot. Do not turn these into a scoring engine.
+4. Name what loses attention for each proposed entrant, even with spare capacity. When full, identify which idea would need to leave first. Respect the lifecycle limits; a recommendation never frees a slot.
 
-Rank ideas explicitly against one another and the option of starting nothing. Assign exactly one recommendation per idea:
-- PROMOTE: meaningful external evidence appears sufficient; request promotion-gate review, never bypass lifecycle steps.
-- VALIDATE: one cheap test could change the decision, so allocate attention to that test.
-- PARK: insufficient priority or a worthwhile reference without a current product case; specify a revisit trigger.
-- MERGE: substantially the same mechanism/job; name the destination and what would be retained.
-- KILL: strong negative evidence or an unacceptable dependency; explain what failed.
+## Save the ranking
 
-For terminal ideas, mark “no active candidacy”; retain the disposition (MERGE for MERGED, KILL for REJECTED, PARK for SHIPPED as a recommendation of no new work, not a state change). Do not automatically resurrect them. An existing BUILDING idea should be compared with finishing its current scope; VALIDATE can mean its next external test and PROMOTE can mean continue a justified commitment, without resetting state. Explain this explicitly.
+Append to workspace **PORTFOLIO.md** using `append-report triage-ideas` without `--idea`. Each ranked row gives the recommendation, comparative rationale, evidence confidence and what would change it. Use qualitative judgments rather than numerical scores.
 
-Each ranked row includes recommendation, concise comparative rationale, evidence confidence, and what would change it. Summarize capacity from canonical state: ACTIVE <=3 including VALIDATING/PROMOTED/BUILDING; BUILDING <=1. Each proposed entrant names what work loses attention even if capacity is free. When full, name exactly which current idea must leave and its proposed disposition. Do not propose more than three combined active ideas or a second builder. User annotations expressing an active commitment with no matching STATE are a conflict to resolve, not free capacity.
+Terminal ideas have “no active candidacy”: retain MERGE for MERGED, KILL for REJECTED, and PARK for SHIPPED as a recommendation of no new work, not a state change. For BUILDING, explain when VALIDATE means its next test or PROMOTE means continuing a justified commitment; neither resets state.
 
-## Non-goals and handoff
+An empty portfolio gets an empty assessment; one idea is compared with existing commitments and doing nothing. Missing evidence lowers confidence. Malformed state or a human commitment that conflicts with recorded state blocks recommendations to increase commitment until resolved.
 
-No state changes, silent promotion, research, implementation or automatic gate calls. Recommend fewer projects; an all-PARK/KILL result is valid. Link gate checks or a cheap test as optional follow-up and stop.
+Finish with the capacity summary and attention tradeoff. An all-PARK/KILL result is valid. Gate reviews and tests remain suggested follow-ups.
