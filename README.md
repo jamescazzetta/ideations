@@ -1,6 +1,8 @@
+![Ideations — A set of skills for agentic ideation. Understand what's worth building.](assets/ideations-header.png)
+
 # Ideations
 
-**Agent skills for capturing ideas, testing their promise, and deciding what to pursue.**
+**A set of skills for agentic ideation. Understand what's worth building.**
 
 Save a thought, see what already exists, work out what someone might buy, and choose a small real-world test. Ideations keeps your research, evidence, and decisions in Markdown so you can return to an idea without starting over.
 

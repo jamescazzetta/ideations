@@ -1,0 +1,11 @@
+Edited with the built-in image_gen tool. Input: the approved dark header with the user's portrait and interlocking pattern.
+
+Edit this existing Ideations header image. This is a tightly scoped text replacement, not a redesign.
+
+Replace ONLY the two subtitle lines beneath the large "Ideations" title with exactly:
+"A set of skills for agentic ideation."
+"Understand what's worth building."
+
+Keep the subtitle in two lines, using the existing white sans-serif style, left alignment, and similar size and spacing. Adjust only the subtitle typography slightly if necessary so both lines fit comfortably in the dark text area without overlapping the portrait or graphic band. Spell every word exactly, including "agentic" and the apostrophe in "what's".
+
+Preserve everything else: the large Ideations title, white interlocking-loop mark, dark background, original man's photographic face and identity, his precise crop and expression, skin/hair/beard texture, colorful interlocking lower-band pattern, grain, palette, border, rounded corners, layout, and 2:1 aspect ratio. Do not redraw or beautify the portrait. No additional text. Opaque background.
