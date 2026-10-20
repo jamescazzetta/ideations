@@ -6,6 +6,14 @@ Save a thought, see what already exists, work out what someone might buy, and ch
 
 Use it for products, services, or thoughts worth keeping. You choose which skill to run and what to act on.
 
+## Why Ideations?
+
+AI assistants help us generate ideas, explore possibilities, and build prototypes. Choosing what deserves our time still takes judgment: whose problem matters, what evidence would change our minds, and what we would give up to pursue it. Ideations gives that thinking a durable home, so each decision can draw on what we have already learned.
+
+Your idea collection is meant to grow over time. Preserve promising thoughts, failed experiments, useful discoveries, and ideas you have set aside. When requested, [cross-pollinate](skills/cross-pollinate/SKILL.md) revisits the collection to suggest connections: a shared customer problem, a reusable component, or an approach from one idea that could strengthen another. An idea can contribute something valuable even if it never becomes a project. You decide which connections to pursue.
+
+The aim is to accumulate knowledge while keeping active commitments small. The skills should evolve with real use too: refine what helps, and add a procedure when a recurring need earns it a place.
+
 ## How it fits together
 
 There are two folders: this repository holds the reusable tools; a separate workspace holds your ideas.
@@ -93,4 +101,4 @@ A new product or service capture normally gets one small market scan when the to
 
 [Worked examples](examples/README.md) · [Lifecycle and commitment](docs/lifecycle.md) · [Customer learning](docs/commercial-practice.md) · [Files and reports](docs/artifacts.md) · [Migration](docs/migration.md) · [Contributing](CONTRIBUTING.md)
 
-[MIT licensed](LICENSE). Your workspace and local configuration stay outside the shared repository history.
+[Release 0.9.0](https://github.com/jamescazzetta/ideations/releases/tag/v0.9.0) · [MIT licensed](LICENSE). Your workspace and local configuration stay outside the shared repository history.
